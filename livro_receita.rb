@@ -13,7 +13,10 @@ while opcao != 3 do
   if opcao == 1
     puts 'Digite o nome da receita: '
     nome_receita = gets.chomp()
-    receitas << nome_receita
+    puts 'Digite o tipo: '
+    tipo = gets.chomp()
+
+    receitas << {nome_receita: nome_receita, tipo: tipo}
     puts "Receita #{nome_receita} cadastrada com sucesso!\n"
     puts 'Adicionar nova receita?'
   
@@ -22,7 +25,7 @@ while opcao != 3 do
     #o each nada mais faz que percorrer o array e jogar dentro
     #de uma variavel de bloco
     receitas.each do |receita|
-      puts receita
+      puts "#{receita[:nome_receita]} -- #{receita[:tipo]}"
     end
     # o ruby entende que um puts (nome_array) significa que 
     #o usuario quer mostrar os dados do array
