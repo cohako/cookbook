@@ -42,7 +42,7 @@ def buscar_receitas(receitas)
 
   receitas.each do |nome|
     nome.include? (receita)
-      puts
+      puts "Busca Concluida"
       puts "#{nome[:nome_receita]}"
       puts
   end
